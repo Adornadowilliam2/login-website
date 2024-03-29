@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('employees', function (Blueprint $table) {
-            $table->id('id')->primary(); // optimus primary pho king ina ng optimum prime yan oha arghg rah cwdwd
+            $table->id('id')->primary(); 
             $table->string('user_name');
             $table->string('password')->unique();
             $table->string('mobile')->nullable();
             $table->string('email');
-            $table->enum('role_id', ['admin', 'user', 'guest']); // Use ENUM type for role_id
+            $table->enum('role_id', ['admin', 'user', 'guest']); 
             $table->timestamps();
         });
     }
